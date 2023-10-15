@@ -28,18 +28,21 @@ header .text-container {
     
     max-width       : 90%;
     margin          : 0 auto;
+    margin-left     : 17%;
+    margin-bottom   : 3%;
 }
 
 header .text-container h1 {
-    font-size   : 57px;
+    font-size   : 44px;
     color       : var(--dark-grey);
     font-weight : 500;
 }
 
 header .text-container p {  
-    color       : var(--light-grey);
-    font-size   : 22px;
-    font-weight : 900;
+    color       : black;
+    font-size   : 17px;
+    font-weight : 700;
+    width       : 75%;
 }
 
 header .text-container .heading {

@@ -5,8 +5,9 @@
     justify-content : center;
 
     max-width       : 80%;
-    width           : 100%;
+    width           : 64%;
     margin          : 0 auto;
+    margin-left     : 17%;
 
     padding         : 24px;
 
@@ -18,8 +19,9 @@
 .form-group .form-icon {
     display         : flex;
     font-size       : 14px;
-    color           : var(--light-grey);
-    gap             : 8px;
+    font-weight     : 800;
+    color           : var(--dark-grey);
+    gap             : 10px;
     align-items     : center;
     justify-content : center;
 }
@@ -29,7 +31,7 @@
 }
 
 .form-group h3 {
-    font-size      : 24px;
+    font-size      : 26px;
     color          : #bfbfbf;
     font-weight    : 600;
     margin-top     : 38px;
@@ -42,10 +44,12 @@
     align-items     : center;
     justify-content : flex-start;
     border-top      : 1px solid  #bfbfbf;
-    padding         : 18px ;
+    padding         : 18px 4px;
     position        : relative;
-    font-weight: 700;
-    color: var(--light-grey );
+    font-weight     : 700;
+    color           : var(--light-grey );
+    gap             : 10px;
+
 }
 
 .form-group .radio-wrapper:nth-last-child(3){
@@ -54,55 +58,64 @@
 
 
 .form-group .radio-wrapper span {
-    position : absolute;
-    right    : 0;
-    font-weight: 700;
-    color: var(--light-grey );
+    position    : absolute;
+    right       : 0;
+    font-weight : 700;
+    color       : var(--light-grey );
+}
+
+.form-group .radio-wrapper input {
+    width   : 20px;
+    height  : 20px;
 }
 
 .form-group .checkbox-wrapper {
-    font-weight: 700;
-    margin-top: 40px;
-    margin-bottom: 50px;
-    position: relative;
-    width: 100%;
+    font-weight   : 700;
+    margin-top    : 40px;
+    margin-bottom : 50px;
+    position      : relative;
+    width         : 100%;
 
 }
 
 .form-group .checkbox-wrapper span {
-    position: absolute;
-    right: 0;
+    position : absolute;
+    right    : 0;
 }
 
+.form-group .checkbox-wrapper input {
+    width   : 20px;
+    height  : 20px;
+}
 
 // BUTTONs
 .form-group .btn-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 24px;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    width           : 100%;
+    gap             : 24px;
 }
 
 .form-group .btn-wrapper .btn {
-    font-size: 18px;
-    border-radius: 4px;
-    width: 30%px;
-    padding: 13px 95px 13px 95px ;
-    color: var(--light-grey);
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
+    font-size       : 18px;
+    border-radius   : 4px;
+    width           : 30%px;
+    padding         : 13px 95px 13px 95px ;
+    color           : var(--light-grey);
+    text-transform  : uppercase;
+    border          : none;
+    cursor          : pointer;
     
 }
 
 .form-group .btn-wrapper .btn-primary {
-    background-color: var(--yellow);
-    color: black;
+    background-color : var(--yellow);
+    color            : black;
 }
 
 .form-group .btn-wrapper .btn-secondary {
-    background-color: transparent;
-    border: 3px solid #bfbfbf;
-    color: black;
+    background-color : transparent;
+    border           : 3px solid #bfbfbf;
+    color            : black;
 }

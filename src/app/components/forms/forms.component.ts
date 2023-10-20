@@ -1,6 +1,6 @@
 import { FilterUnitsService } from './../../services/filter-units.service';
 import { SmartUnitService } from '../../services/smart-unit.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Location } from 'src/app/type/location.interface';
 
@@ -14,6 +14,7 @@ export class FormsComponent implements OnInit {
   results: Location[] = [];
   resultsFiltered: Location[] = [];
   formGroup!:FormGroup;
+  @Output() submitEvent = new EventEmitter();
  
 
   constructor( 
@@ -29,14 +30,17 @@ export class FormsComponent implements OnInit {
     });
 
     this.service.findUnits().subscribe(data => {
-      this.results = data.locations;
-      this.resultsFiltered = data.locations;
+      this.results = data;
+      this.resultsFiltered = data;
     });
   }
 
   onSubmit(): void {
     let {showClosed, hour} = this.formGroup.value
     this.resultsFiltered = this.filterUnitsService.filter(this.results, showClosed, hour);
+    this.service.setFilteredUnits(this.resultsFiltered);
+
+    this.submitEvent.emit();
   }
     
   onClean(): void {
